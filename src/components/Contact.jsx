@@ -62,7 +62,7 @@ export default function Contact() {
                 GitHub
               </h3>
               <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
-                View my projects and repos
+                View my projects and repositories
               </p>
             </div>
           </a>
@@ -84,7 +84,7 @@ export default function Contact() {
                 LinkedIn
               </h3>
               <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
-                Connect with me professionally
+                Connect me professionally
               </p>
             </div>
           </a>
