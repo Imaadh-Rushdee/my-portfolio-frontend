@@ -1,0 +1,88 @@
+/* Tailwind base imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------
+  Custom Utilities & Animations
+------------------------------------------------- */
+@layer utilities {
+  /* Fade-up animation for sections */
+  .fade-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .fade-up-show {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* -------------------------------------------------
+  Smooth scroll
+------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------
+  Gradient animation
+------------------------------------------------- */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* -------------------------------------------------
+  Pastel animated gradient background
+------------------------------------------------- */
+.bg-gradient-animated {
+  background: linear-gradient(
+    45deg,
+    #a8edea,
+    #fed6e3,
+    #fbc2eb,
+    #c1ffd7
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 20s ease infinite;
+}
+
+/* -------------------------------------------------
+  Optional overlay for text readability
+------------------------------------------------- */
+.bg-gradient-overlay {
+  background-color: rgba(255, 255, 255, 0.2); /* Light mode overlay */
+}
+
+.dark .bg-gradient-overlay {
+  background-color: rgba(0, 0, 0, 0.3); /* Dark mode overlay */
+}
+
+/* -------------------------------------------------
+  Optional additional utilities
+------------------------------------------------- */
+.fade-in {
+  @apply opacity-0 transition-opacity duration-1000 ease-in;
+}
+
+.fade-in-show {
+  @apply opacity-100;
+}
+
+/* -------------------------------------------------
+  Responsive text example (Hero)
+------------------------------------------------- */
+.hero-title {
+  @apply text-4xl md:text-6xl font-bold mb-4;
+}
+
+.hero-subtitle {
+  @apply text-lg md:text-2xl;
+}
