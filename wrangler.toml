@@ -1,5 +1,3 @@
 name = "imaadh-portfolio"
 compatibility_date = "2026-01-03"
-
-[site]
-bucket = "./dist"
+main = "./dist"
