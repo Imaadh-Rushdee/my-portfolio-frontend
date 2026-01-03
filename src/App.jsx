@@ -3,7 +3,7 @@ import Profile from './pages/Profile'
 import Navbar from './components/Navbar'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
 
   return (
     <div className={darkMode ? "dark" : ""}>
