@@ -7,17 +7,19 @@ import References from "../components/References";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import AnimatedSection from "../components/AnimatedSection"
+import Certificates from "../components/Certifications";
 function Dashboard() {
     return (
         <>
-                <AnimatedSection><Hero />
-                <Bio />
-                <Skills />
-                <Projects />
-                <Education />
-                <References />
-                <Contact />
-                <Footer /></AnimatedSection>
+                <AnimatedSection><Hero /></AnimatedSection>
+                <AnimatedSection><Bio /></AnimatedSection>
+                <AnimatedSection><Skills /></AnimatedSection>
+                <AnimatedSection><Projects /></AnimatedSection>
+                <AnimatedSection><Education /></AnimatedSection>
+                <AnimatedSection><Certificates /></AnimatedSection>
+                <AnimatedSection><References /></AnimatedSection>
+                <AnimatedSection><Contact /></AnimatedSection>
+                <AnimatedSection><Footer /></AnimatedSection>
         </>
     )
 }

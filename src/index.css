@@ -1,7 +1,17 @@
-/* Tailwind base imports */
+/* -------------------------------------------------
+  Tailwind base imports
+------------------------------------------------- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* -------------------------------------------------
+  Global body/html styling
+------------------------------------------------- */
+
+
+
+
 
 /* -------------------------------------------------
   Custom Utilities & Animations
@@ -15,13 +25,14 @@
   .fade-up-show {
     @apply opacity-100 translate-y-0;
   }
-}
 
-/* -------------------------------------------------
-  Smooth scroll
-------------------------------------------------- */
-html {
-  scroll-behavior: smooth;
+  .fade-in {
+    @apply opacity-0 transition-opacity duration-1000 ease-in;
+  }
+
+  .fade-in-show {
+    @apply opacity-100;
+  }
 }
 
 /* -------------------------------------------------
@@ -39,20 +50,13 @@ html {
   }
 }
 
+body {
+  @apply transition-colors duration-300;
+}
+
 /* -------------------------------------------------
   Pastel animated gradient background
 ------------------------------------------------- */
-.bg-gradient-animated {
-  background: linear-gradient(
-    45deg,
-    #a8edea,
-    #fed6e3,
-    #fbc2eb,
-    #c1ffd7
-  );
-  background-size: 300% 300%;
-  animation: gradientMove 20s ease infinite;
-}
 
 /* -------------------------------------------------
   Optional overlay for text readability
@@ -66,17 +70,6 @@ html {
 }
 
 /* -------------------------------------------------
-  Optional additional utilities
-------------------------------------------------- */
-.fade-in {
-  @apply opacity-0 transition-opacity duration-1000 ease-in;
-}
-
-.fade-in-show {
-  @apply opacity-100;
-}
-
-/* -------------------------------------------------
   Responsive text example (Hero)
 ------------------------------------------------- */
 .hero-title {
@@ -85,4 +78,11 @@ html {
 
 .hero-subtitle {
   @apply text-lg md:text-2xl;
+}
+
+/* -------------------------------------------------
+  Extra safety: ensure sections never show white flash
+------------------------------------------------- */
+section {
+  @apply bg-transparent; /* so the page background shows */
 }

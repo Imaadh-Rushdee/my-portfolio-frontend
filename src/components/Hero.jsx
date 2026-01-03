@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePhoto from "../assets/profile.jpg"; // replace with your photo
+import ProfilePhoto from "../assets/profile.png"; // replace with your photo
 
 export default function Hero() {
   return (

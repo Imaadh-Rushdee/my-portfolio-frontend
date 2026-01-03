@@ -1,25 +1,17 @@
 const references = [
   {
-    name: "Jane Doe",
-    role: "Senior Software Engineer | Mentor",
-    email: "jane.doe@email.com",
-    phone: "+94 77 123 4567",
-    linkedin: "https://linkedin.com/in/janedoe",
-    avatar: "https://i.pravatar.cc/100?img=32",
-  },
-  {
-    name: "John Smith",
-    role: "Team Lead",
-    email: "john.smith@email.com",
-    phone: "+94 71 987 6543",
-    linkedin: "https://linkedin.com/in/johnsmith",
+    name: "Ms. Chandula Rajapaksha",
+    role: "Consultant | Lecturer",
+    email: "chandula@nibm.lk",
+    phone: "+94 11 732 1000",
+    linkedin: null,
     avatar: null,
   },
   {
-    name: "Alice Johnson",
-    role: "Professor – Software Engineering",
-    email: "alice.johnson@university.edu",
-    phone: null,
+    name: "Ms. Bhagya Hapuarachchi",
+    role: "Consultant | Lecturer",
+    email: "bhagya@nibm.lk",
+    phone: "+94 11 732 1000",
     linkedin: null,
     avatar: null,
   },
@@ -31,20 +23,17 @@ export default function References() {
       id="references"
       className="bg-gray-50 dark:bg-gray-900 py-20 transition-colors duration-500"
     >
-      <div className="max-w-5xl mx-auto px-6">
-        {/* Section Title */}
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-14">
           References
         </h2>
 
-        {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {references.map((ref, index) => (
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center">
+          {references.map((ref, idx) => (
             <div
-              key={index}
+              key={idx}
               className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              {/* Header */}
               <div className="flex items-center gap-4 mb-4">
                 {ref.avatar ? (
                   <img
@@ -57,19 +46,15 @@ export default function References() {
                     {ref.name.charAt(0)}
                   </div>
                 )}
-
-                <div>
+                <div className="text-left">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                     {ref.name}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    {ref.role}
-                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{ref.role}</p>
                 </div>
               </div>
 
-              {/* Contact Info */}
-              <div className="space-y-2 text-sm">
+              <div className="space-y-2 text-sm text-left">
                 {ref.email && (
                   <p className="text-gray-700 dark:text-gray-300">
                     📧{" "}
@@ -81,7 +66,6 @@ export default function References() {
                     </a>
                   </p>
                 )}
-
                 {ref.phone && (
                   <p className="text-gray-700 dark:text-gray-300">
                     📞{" "}
@@ -90,7 +74,6 @@ export default function References() {
                     </a>
                   </p>
                 )}
-
                 {ref.linkedin && (
                   <p className="text-gray-700 dark:text-gray-300">
                     🔗{" "}
@@ -104,7 +87,6 @@ export default function References() {
                     </a>
                   </p>
                 )}
-
                 {!ref.email && !ref.phone && !ref.linkedin && (
                   <p className="text-gray-500 italic">
                     Contact details available upon request
