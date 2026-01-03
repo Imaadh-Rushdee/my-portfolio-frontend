@@ -10,14 +10,14 @@ import AnimatedSection from "../components/AnimatedSection"
 function Dashboard() {
     return (
         <>
-                <AnimatedSection><Hero /></AnimatedSection>
-                <AnimatedSection><Bio /></AnimatedSection>
-                <AnimatedSection><Skills /></AnimatedSection>
-                <AnimatedSection><Projects /></AnimatedSection>
-                <AnimatedSection><Education /></AnimatedSection>
-                <AnimatedSection><References /></AnimatedSection>
-                <AnimatedSection><Contact /></AnimatedSection>
-                <AnimatedSection><Footer /></AnimatedSection>
+                <AnimatedSection><Hero />
+                <Bio />
+                <Skills />
+                <Projects />
+                <Education />
+                <References />
+                <Contact />
+                <Footer /></AnimatedSection>
         </>
     )
 }
