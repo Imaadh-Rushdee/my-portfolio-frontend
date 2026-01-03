@@ -1,0 +1,12 @@
+name = "imaadh-portfolio"        # Worker name
+main = "worker.js"               # Your Worker entry file
+compatibility_date = "2026-01-03"
+
+type = "javascript"              # or "webpack" if you use bundling
+
+[site]
+bucket = "./dist"                # Path to your Vite build
+entry-point = "worker"           # Worker entry point folder (optional)
+
+[env.production]
+# You can add environment-specific bindings here
