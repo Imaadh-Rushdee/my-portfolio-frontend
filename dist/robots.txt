@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://imaadh-rushdee-portfolio.pages.dev/sitemap.xml

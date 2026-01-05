@@ -76,19 +76,21 @@ export default function Education() {
 
       {/* Certificate Modal */}
       {selectedCert && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4">
-          <div className="relative bg-white dark:bg-gray-900 rounded-xl p-4 max-w-3xl w-full">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4 sm:px-6">
+          <div className="relative bg-white dark:bg-gray-900 rounded-xl overflow-hidden w-full max-w-sm sm:max-w-lg md:max-w-2xl">
+            {/* Close Button */}
             <button
               onClick={() => setSelectedCert(null)}
-              className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 text-2xl"
+              className="absolute top-2 right-2 text-gray-600 dark:text-gray-300 text-2xl sm:text-3xl z-50"
             >
               ✕
             </button>
 
+            {/* Certificate Image */}
             <img
-              src={selectedCert || defaultCert}
+              src={selectedCert}
               alt="Certificate"
-              className="w-full h-auto rounded-lg"
+              className="w-full h-auto max-h-[90vh] object-contain"
             />
           </div>
         </div>
